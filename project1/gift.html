@@ -1,0 +1,274 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your Gift 🎁</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        .giftBox {
+            width: 90%;
+            max-width: 750px;
+            margin: 40px auto;
+            padding: 40px 25px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.88);
+            border-radius: 30px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+            position: relative;
+            z-index: 2;
+            animation: fadeIn 1.2s;
+        }
+
+        .giftBox h1 {
+            color: #ff1493;
+            font-size: clamp(28px, 5vw, 42px);
+            margin-bottom: 15px;
+        }
+
+        .giftBox p {
+            color: #555;
+            font-size: 17px;
+            line-height: 1.9;
+            margin: 18px 0;
+        }
+
+        
+#giftImage {
+    display: block;
+    width: fit-content;
+    margin: 35px auto;
+    font-size: 200px;
+    line-height: 1.3;
+    cursor: pointer;
+    user-select: none;
+    transform-origin: center bottom;
+    animation: giftBounce 1.5s infinite;
+    transition: scale 0.3s;
+}
+
+#giftImage:hover {
+    scale: 1.12;
+}
+
+#giftImage:focus-visible {
+    outline: 3px solid #ff1493;
+    outline-offset: 8px;
+    border-radius: 15px;
+}
+
+@keyframes giftBounce {
+    0%, 100% {
+        transform: translateY(0) rotate(0);
+    }
+
+    25% {
+        transform: translateY(-15px) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateY(0) rotate(0);
+    }
+
+    75% {
+        transform: translateY(-10px) rotate(5deg);
+    }
+}
+
+
+        @keyframes giftBounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+        .shake {
+            animation: giftShake 0.7s ease-in-out !important;
+        }
+
+        @keyframes giftShake {
+            0%, 100% { transform: translateX(0) rotate(0); }
+            20%, 60% { transform: translateX(-10px) rotate(-5deg); }
+            40%, 80% { transform: translateX(10px) rotate(5deg); }
+        }
+
+        #openGiftBtn,
+        #finalBtn {
+            display: block;
+            margin: 25px auto 0;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            background: #ff4da6;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-size: 17px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 0 20px pink;
+            transition: 0.3s;
+        }
+
+        #openGiftBtn:hover,
+        #finalBtn:hover {
+            background: #ff1493;
+            transform: scale(1.05);
+        }
+
+        #surprise {
+            animation: fadeIn 1s;
+        }
+
+        #surprise h2 {
+            color: #ff1493;
+            font-size: 30px;
+            margin: 20px 0;
+        }
+
+        .gift-heart {
+            font-size: 45px;
+            animation: giftHeartBeat 1.2s infinite;
+        }
+
+        @keyframes giftHeartBeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
+
+        #surprise .panda {
+            width: 200px;
+            max-width: 75%;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        @media (max-width: 600px) {
+            .giftBox {
+                padding: 30px 18px;
+            }
+
+            .giftBox p {
+                font-size: 15px;
+            }
+
+            #surprise h2 {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Floating hearts -->
+    <div class="hearts">
+        <span>❤️</span>
+        <span>💖</span>
+        <span>💕</span>
+        <span>💗</span>
+        <span>💝</span>
+        <span>💞</span>
+    </div>
+
+    <!-- Floating balloons -->
+    <div class="balloons">
+        <span>🎈</span>
+        <span>🎈</span>
+        <span>🎈</span>
+        <span>🎈</span>
+        <span>🎈</span>
+        <span>🎈</span>
+    </div>
+
+    <main class="giftBox">
+
+        <h1>🎁 Your Birthday Gift 🎁</h1>
+
+        <p id="giftText">
+            Gauri, there's one more surprise waiting for you! ❤️
+            <br>
+            Tap the gift to open it. ✨
+        </p>
+
+        
+<div
+    id="giftImage"
+    role="button"
+    tabindex="0"
+    aria-label="Open your birthday gift"
+>
+    🎁
+</div>
+
+
+        <button id="openGiftBtn">
+            Open Your Gift 💝
+        </button>
+
+        <!-- Hidden birthday surprise -->
+        <section id="surprise" class="hidden">
+
+            <div class="gift-heart">💖</div>
+
+            <h2>🎉 Surprise, Gauri! 🎉</h2>
+
+            <p>
+                I hope this little website made you smile. ❤️
+                You deserve lots of happiness today and always.
+            </p>
+
+            <p>
+                Thank you for all the laughs, silly conversations,
+                little arguments, and beautiful memories.
+                Every little moment has made our friendship special. 🫶
+            </p>
+
+            <p>
+                May your 18th year bring you happiness, success,
+                exciting adventures, and countless reasons to smile.
+            </p>
+
+            <p>
+                Here's to more laughter, more memories,
+                and many more wonderful moments ahead! ❤️
+            </p>
+
+            <img
+                src="images/panda.gif"
+                class="panda"
+                alt="Cute birthday panda"
+            >
+
+            <h2>Happy 18th Birthday! 🎂</h2>
+
+            <p>
+                Stay happy, keep smiling, and always be yourself. ❤️
+            </p>
+
+            <button id="finalBtn">
+                One Last Surprise 🌸
+            </button>
+
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script src="gift.js"></script>
+
+</body>
+</html>
+```

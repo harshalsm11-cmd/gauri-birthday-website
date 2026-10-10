@@ -1,0 +1,1135 @@
+/* ===========================
+   GOOGLE FONT & RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+    overflow-y:auto;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(135deg,#ffd6e8,#ffe6b3);
+
+}
+
+/* ===========================
+        CARD
+=========================== */
+
+.welcome-card{
+
+    width:90%;
+    max-width:700px;
+
+    padding:45px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:30px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.15);
+
+    animation:fadeIn 1.5s;
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+.welcome-card h3{
+
+    color:#ff4da6;
+
+    font-size:26px;
+
+    margin-bottom:10px;
+
+}
+
+.welcome-card h1{
+
+    font-size:65px;
+
+    color:#ff1493;
+
+    margin-bottom:20px;
+
+    animation:glow 2s infinite;
+
+}
+
+.subtitle{
+
+    font-size:22px;
+
+    color:#555;
+
+    margin-top:20px;
+
+    line-height:1.7;
+
+}
+
+/* ===========================
+        PANDA
+=========================== */
+
+.panda{
+
+    width:230px;
+
+    display:block;
+
+    margin:25px auto;
+
+    animation:bounce 2s infinite;
+
+}
+
+@keyframes bounce{
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+}
+
+/* ===========================
+        BUTTON
+=========================== */
+
+#startBtn{
+
+    margin-top:35px;
+
+    padding:18px 45px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#ff4da6;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+    box-shadow:0 0 20px #ff8dc7;
+
+}
+
+#startBtn:hover{
+
+    transform:scale(1.08);
+
+    background:#ff1493;
+
+    box-shadow:0 0 35px hotpink;
+
+}
+
+/* ===========================
+       HEARTS
+=========================== */
+
+.hearts{
+
+    position:fixed;
+
+    width:100%;
+    height:100%;
+
+    left:0;
+    top:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+}
+
+.hearts span{
+
+    position:absolute;
+
+    bottom:-100px;
+
+    font-size:30px;
+
+    animation:hearts 12s linear infinite;
+
+}
+
+.hearts span:nth-child(1){left:5%;}
+.hearts span:nth-child(2){left:20%;animation-duration:9s;}
+.hearts span:nth-child(3){left:40%;animation-duration:11s;}
+.hearts span:nth-child(4){left:60%;animation-duration:13s;}
+.hearts span:nth-child(5){left:80%;animation-duration:10s;}
+.hearts span:nth-child(6){left:95%;animation-duration:12s;}
+
+@keyframes hearts{
+
+0%{
+
+transform:translateY(0);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-120vh);
+
+opacity:0;
+
+}
+
+}
+
+/* ===========================
+      BALLOONS
+=========================== */
+
+.balloons{
+
+    position:fixed;
+
+    width:100%;
+
+    height:100%;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+}
+
+.balloons span{
+
+    position:absolute;
+
+    bottom:-120px;
+
+    font-size:45px;
+
+    animation:balloons 15s linear infinite;
+
+}
+
+.balloons span:nth-child(1){left:10%;}
+.balloons span:nth-child(2){left:25%;animation-duration:11s;}
+.balloons span:nth-child(3){left:45%;animation-duration:14s;}
+.balloons span:nth-child(4){left:65%;animation-duration:12s;}
+.balloons span:nth-child(5){left:80%;animation-duration:15s;}
+.balloons span:nth-child(6){left:95%;animation-duration:13s;}
+
+@keyframes balloons{
+
+0%{
+
+transform:translateY(0);
+
+opacity:0;
+
+}
+
+15%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-130vh);
+
+opacity:0;
+
+}
+
+}
+
+/* ===========================
+      ANIMATIONS
+=========================== */
+
+@keyframes glow{
+
+0%{
+
+text-shadow:0 0 10px pink;
+
+}
+
+50%{
+
+text-shadow:0 0 30px hotpink;
+
+}
+
+100%{
+
+text-shadow:0 0 10px pink;
+
+}
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:scale(.9);
+
+}
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+}
+
+/* ===========================
+     MOBILE
+=========================== */
+
+@media(max-width:700px){
+
+.welcome-card h1{
+
+font-size:42px;
+
+}
+
+.subtitle{
+
+font-size:18px;
+
+}
+
+.panda{
+
+width:180px;
+
+}
+
+#startBtn{
+
+font-size:18px;
+
+padding:15px 35px;
+
+}
+
+}
+/* =========================================
+            LETTER PAGE
+========================================= */
+
+.letter-card{
+
+    width:90%;
+    max-width:800px;
+
+    margin:60px auto;
+
+    background:rgba(255,255,255,.80);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:30px;
+
+    padding:45px;
+
+    text-align:center;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.15);
+
+    animation:fadeIn 1.2s;
+
+}
+
+.letter-card h1{
+
+    color:#ff1493;
+
+    font-size:55px;
+
+    margin-bottom:20px;
+
+    animation:glow 2s infinite;
+
+}
+
+.letter-text{
+
+    font-size:22px;
+
+    color:#555;
+
+    line-height:1.9;
+
+    margin-top:25px;
+
+}
+
+.question{
+
+    margin-top:40px;
+
+    color:#ff4da6;
+
+    font-size:35px;
+
+}
+
+.questionText{
+
+    margin-top:15px;
+
+    font-size:24px;
+
+    font-weight:600;
+
+}
+
+.buttons{
+
+    position:relative;
+
+    width:500px;
+
+    height:220px;
+
+    margin:40px auto;
+
+}
+
+#yesBtn{
+
+    position:absolute;
+
+    left:70px;
+
+    top:70px;
+
+    padding:18px 45px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#ff4da6;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 0 25px pink;
+
+}
+
+#yesBtn:hover{
+
+    transform:scale(1.1);
+
+}
+
+#noBtn{
+
+    position:absolute;
+
+    left:320px;
+
+    top:70px;
+
+    padding:18px 45px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#666;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+hr{
+
+    margin:35px 0;
+
+    border:none;
+
+    border-top:2px dashed pink;
+
+}
+
+/* ==========================================
+            MEMORIES PAGE
+========================================== */
+
+.memory-card{
+
+    width:90%;
+    max-width:850px;
+
+    margin:60px auto;
+
+    background:rgba(255,255,255,.82);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:30px;
+
+    padding:40px;
+
+    text-align:center;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.15);
+
+    animation:fadeIn 1s;
+
+}
+
+.memory-card h1{
+
+    color:#ff1493;
+
+    font-size:50px;
+
+    margin-bottom:30px;
+
+    animation:glow 2s infinite;
+
+}
+
+.memory-photo{
+
+    width:320px;
+    height:430px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+    border:8px solid white;
+
+    box-shadow:0 0 35px pink;
+
+    transition:0.8s;
+
+}
+
+#caption{
+
+    margin-top:25px;
+
+    font-size:24px;
+
+    color:#555;
+
+}
+
+.dots{
+
+    margin-top:25px;
+
+}
+
+.dot{
+
+    height:15px;
+    width:15px;
+
+    margin:0 6px;
+
+    display:inline-block;
+
+    border-radius:50%;
+
+    background:#ffc0cb;
+
+}
+
+.dot.active{
+
+    background:#ff1493;
+
+    transform:scale(1.3);
+
+}
+
+#continueBtn{
+
+    margin-top:35px;
+
+    padding:18px 45px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#ff4da6;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 0 25px hotpink;
+
+}
+
+#continueBtn:hover{
+
+    transform:scale(1.08);
+
+}
+
+/* ==========================================
+            LONG LETTER PAGE
+========================================== */
+
+.paper{
+
+    width:90%;
+    max-width:850px;
+
+    margin:60px auto;
+
+    background:#fdf5e6;
+
+    padding:60px;
+
+    border-radius:20px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.25);
+
+    border:4px solid #d8c3a5;
+
+    position:relative;
+
+    overflow:hidden;
+
+    animation:fadeIn 1.2s;
+
+}
+
+/* Soft vintage edge */
+
+.paper::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:20px;
+
+    box-shadow:inset 0 0 60px rgba(120,80,40,.18);
+
+    pointer-events:none;
+
+}
+
+.paper h1{
+
+    text-align:center;
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:60px;
+
+    color:#b22222;
+
+    margin-bottom:35px;
+
+}
+
+#typingText{
+
+    font-size:22px;
+
+    line-height:2;
+
+    color:#4b3b2a;
+
+    white-space:pre-wrap;
+
+    min-height:350px;
+
+    text-align:left;
+
+}
+
+.signature{
+
+    margin-top:40px;
+
+    text-align:right;
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:38px;
+
+    color:#c2185b;
+
+}
+
+#nextBtn{
+
+    display:block;
+
+    margin:50px auto 0;
+
+    padding:18px 45px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#ff4da6;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 0 25px hotpink;
+
+}
+
+#nextBtn:hover{
+
+    transform:scale(1.08);
+
+}
+
+/* ==========================================
+            CELEBRATION PAGE
+========================================== */
+
+.celebrateBox{
+
+    width:90%;
+    max-width:850px;
+    margin:60px auto;
+
+    background:white;
+
+    padding:45px;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.2);
+
+}
+
+.celebrateBox h1{
+
+    color:#ff1493;
+
+    font-size:48px;
+
+    margin-bottom:20px;
+
+}
+
+.celebrateBox h2{
+
+    color:#ff1493;
+
+    margin-top:20px;
+
+}
+
+.celebrateBox p{
+
+    margin-top:20px;
+
+    font-size:22px;
+
+}
+
+.cake{
+
+    width:260px;
+
+    display:block;
+
+    margin:25px auto;
+
+    animation:cakeJump 2s infinite;
+
+    filter:drop-shadow(0 0 25px pink);
+
+}
+
+@keyframes cakeJump{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+}
+
+#giftBtn{
+
+    margin-top:35px;
+
+    padding:18px 45px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#ff4da6;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 0 25px hotpink;
+
+}
+
+#giftBtn:hover{
+
+    transform:scale(1.08);
+
+    background:#ff1493;
+
+}
+.hidden {
+    display: none;
+}
+
+/* ==========================================
+            MINI QUIZ
+========================================== */
+
+.quiz-options{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:15px;
+
+    max-width:500px;
+
+    margin:30px auto;
+
+}
+
+
+.optionBtn{
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:20px;
+
+    background:#ffb6d9;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 0 15px rgba(255,105,180,.3);
+
+}
+
+
+.optionBtn:hover{
+
+    transform:scale(1.05);
+
+    background:#ff4da6;
+
+}
+
+
+#quizResult{
+
+    min-height:30px;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    color:#ff1493;
+
+    margin-top:15px;
+
+}
+
+
+#nextQuestion{
+
+    animation:fadeIn 1s;
+
+}
+
+
+@media(max-width:700px){
+
+    .quiz-options{
+
+        grid-template-columns:1fr;
+
+    }
+
+}/* ==========================================
+        MEMORY PHOTO EFFECT
+========================================== */
+
+.memory-photo {
+
+    transition: opacity .4s ease,
+                transform .4s ease;
+
+    object-fit: cover;
+
+}
+
+
+.memory-photo:hover {
+
+    transform: scale(1.03);
+
+}
+
+
+/* ==========================================
+        MEMORY CAPTION
+========================================== */
+
+#caption {
+
+    font-size:20px;
+
+    color:#ff1493;
+
+    font-weight:600;
+
+    margin:20px 0;
+
+    min-height:30px;
+
+}
+
+
+/* ==========================================
+        MEMORY DOTS
+========================================== */
+
+.dot {
+
+    transition:.3s;
+
+}
+
+
+.dot.active {
+
+    transform:scale(1.4);
+
+}
+
+
+/* ==========================================
+        CONTINUE BUTTON
+========================================== */
+
+#continueBtn {
+
+    margin-top:25px;
+
+    padding:14px 30px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#ff69b4;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    box-shadow:0 8px 20px rgba(255,105,180,.3);
+
+    transition:.3s;
+
+}
+
+
+#continueBtn:hover {
+
+    transform:scale(1.08);
+
+}
+/* ==========================================
+        MEMORY PAGE IMPROVEMENTS
+========================================== */
+
+.memory-photo {
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+
+}
+
+
+#caption {
+
+    font-size:20px;
+
+    color:#ff1493;
+
+    font-weight:600;
+
+    margin:20px 0;
+
+    min-height:30px;
+
+}
+
+
+.dot {
+
+    transition:0.3s;
+
+}
+
+
+.dot.active {
+
+    transform:scale(1.4);
+
+}
+
+
+#continueBtn {
+
+    margin-top:25px;
+
+    padding:14px 30px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#ff69b4;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    box-shadow:0 8px 20px rgba(255,105,180,.3);
+
+}
+
+
+#continueBtn:hover {
+
+    transform:scale(1.08);
+
+}
+.specialText {
+    text-align: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Personal Letter - Center the gift button */
+.paper #giftBtn {
+    display: block;
+    margin: 25px auto 0;
+    position: relative;
+    left: auto;
+    right: auto;
+    transform: none;
+}

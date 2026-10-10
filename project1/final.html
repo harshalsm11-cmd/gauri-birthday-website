@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Gauri ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        .final-stage {
+            width: 92%;
+            max-width: 760px;
+            margin: 35px auto;
+            padding: 35px 24px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            overflow: hidden;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 0.91);
+            box-shadow: 0 15px 50px rgba(255, 20, 147, 0.18);
+            animation: cardAppear 1s ease both;
+        }
+
+        #countdown {
+            color: #ff1493;
+            font-size: clamp(70px, 18vw, 130px);
+            margin: 25px 0;
+            text-shadow: 0 0 30px rgba(255, 20, 147, 0.3);
+            animation: countdownPop 0.8s ease both;
+        }
+
+        #finalContent.hidden {
+            display: none !important;
+        }
+
+        #finalContent h1 {
+            color: #ff1493;
+            font-size: clamp(26px, 5vw, 43px);
+            animation: titleReveal 1.2s ease both;
+        }
+
+        #finalContent h2 {
+            color: #e91e83;
+            font-size: clamp(19px, 4vw, 26px);
+            margin: 22px 0 12px;
+        }
+
+        #finalContent p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.9;
+            margin: 18px auto;
+            max-width: 580px;
+        }
+
+        #cake {
+            font-size: clamp(75px, 16vw, 115px);
+            margin: 12px 0;
+            animation: cakeBounce 1.5s ease-in-out infinite;
+            filter: drop-shadow(0 8px 12px rgba(255, 105, 180, 0.2));
+        }
+
+        .final-panda {
+            display: block;
+            width: 190px;
+            max-width: 70%;
+            height: auto;
+            margin: 20px auto;
+            animation: pandaFloat 3s ease-in-out infinite;
+        }
+
+        .friendship-note {
+            margin-top: 28px !important;
+            padding: 20px;
+            border-radius: 22px;
+            background: linear-gradient(135deg, #fff0f7, #fff8e8);
+            border: 1px solid #ffd5e9;
+            animation: cardAppear 1.2s ease both;
+        }
+
+        .signature {
+            margin-top: 28px !important;
+            font-weight: 600;
+            color: #ff1493 !important;
+            font-size: 18px !important;
+        }
+
+        .final-heart {
+            display: inline-block;
+            animation: heartBeat 1.1s infinite;
+        }
+
+        .music-button {
+            margin-top: 12px;
+            padding: 10px 18px;
+            border: 1px solid #ff8ac4;
+            border-radius: 30px;
+            background: #fff0f7;
+            color: #d41476;
+            font: inherit;
+            cursor: pointer;
+        }
+
+        .music-button:hover {
+            background: #ffe0ef;
+        }
+
+        .sparkle {
+            position: fixed;
+            z-index: 3;
+            pointer-events: none;
+            animation: sparkleFly 2.5s ease-out forwards;
+        }
+
+        @keyframes cardAppear {
+            from {
+                opacity: 0;
+                transform: translateY(35px) scale(0.94);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes countdownPop {
+            0% { opacity: 0; transform: scale(0.3) rotate(-12deg); }
+            65% { opacity: 1; transform: scale(1.15) rotate(5deg); }
+            100% { opacity: 1; transform: scale(1) rotate(0); }
+        }
+
+        @keyframes titleReveal {
+            from { opacity: 0; transform: translateY(-25px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes cakeBounce {
+            0%, 100% { transform: translateY(0) rotate(-2deg); }
+            50% { transform: translateY(-12px) rotate(2deg); }
+        }
+
+        @keyframes pandaFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes heartBeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.25); }
+        }
+
+        @keyframes sparkleFly {
+            0% {
+                opacity: 0;
+                transform: translateY(20px) scale(0.4) rotate(0);
+            }
+            15% { opacity: 1; }
+            100% {
+                opacity: 0;
+                transform: translateY(-150px) scale(1.3) rotate(40deg);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .final-stage {
+                padding: 28px 17px;
+                margin: 22px auto;
+            }
+
+            #finalContent p {
+                font-size: 14px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="hearts" aria-hidden="true">
+        <span>❤️</span>
+        <span>💖</span>
+        <span>💕</span>
+        <span>💗</span>
+        <span>💝</span>
+        <span>💞</span>
+    </div>
+
+    <div class="balloons" aria-hidden="true">
+        <span>🎈</span>
+        <span>🎈</span>
+        <span>🎈</span>
+        <span>🎈</span>
+        <span>🎈</span>
+        <span>🎈</span>
+    </div>
+
+    <main class="final-stage">
+
+        <h1 id="countdown" aria-live="polite">3...</h1>
+
+        <section id="finalContent" class="hidden">
+
+            <h1>🎉 HAPPY BIRTHDAY GAURI 🎉</h1>
+
+            <div id="cake" aria-label="Birthday cake">🎂</div>
+
+            <img
+                src="images/panda.gif"
+                class="final-panda"
+                alt="Cute birthday panda"
+            >
+
+            <h2>You are very special to me <span class="final-heart">❤️</span></h2>
+
+            <p>
+                May you always smile like today. 😊
+                <br><br>
+                May your life always be filled with happiness,
+                success and beautiful memories.
+            </p>
+
+            <div class="friendship-note">
+                <h2>💌 A Little Message for You</h2>
+
+                <p>
+                    Gauri, thank you for being a special part of my life.
+                    From random conversations and silly jokes to all the
+                    little moments we've shared, our friendship has given
+                    me memories I'll always value.
+                </p>
+
+                <p>
+                    I hope the year ahead brings you new adventures,
+                    wonderful opportunities, lots of laughter, and
+                    countless reasons to be happy.🫶
+                </p>
+
+                 
+                
+            </div>
+
+            <p class="signature">
+                Made with <span class="final-heart">❤️</span> by Harshal
+            </p>
+
+            <p>
+                Happy 18th Birthday, Gauri! 🎂✨
+                <br>
+                Keep smiling and always be yourself. 💖
+            </p>
+
+            <button id="musicButton" class="music-button" type="button">
+                🎵 Play Birthday Music
+            </button>
+
+        </section>
+
+    </main>
+
+    <audio id="birthdayMusic" loop preload="auto">
+        <source src="music/birthday.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script src="final.js"></script>
+
+</body>
+</html>
